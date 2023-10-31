@@ -1,7 +1,9 @@
-    #ifndef LISTASE_H
-    #define LISTASE_H
+    
     #include <stdio.h>
     #include <stdlib.h>
+    
+    #ifndef LISTASE_H
+    #define LISTASE_H
 
     typedef char
         tp_item;
@@ -88,43 +90,6 @@
         }
         if(atu == NULL) return NULL;
         return atu;
-    }
-
-    int tamanho_listase(tp_listase *lista){
-        int cont = 0;
-        tp_listase *atu;
-        atu = lista;
-        while(atu != NULL){
-            cont++;
-            atu = atu->prox;
-        }
-        return cont;
-    }
-
-    void destroi_listase(tp_listase **l){
-        tp_listase *atu;
-        atu = *l;
-        while(atu != NULL){
-            *l = atu->prox;
-            free(atu);
-            atu = *l;
-        }
-        *l = NULL;
-
-    }
-    int listase_igual(tp_listase *l1, tp_listase *l2){
-        tp_listase *atu1, *atu2;
-        atu1=l1;
-        atu2=l2;
-        if(tamanho_listase(atu1)!=tamanho_listase(atu2))return 0;
-        while(atu1!=NULL){
-            if(atu1->info!=atu2->info){
-                return 0;
-            }
-            atu1=atu1->prox;
-            atu2=atu2->prox;
-            }
-            return 1;
     }
 
     #endif
