@@ -20,7 +20,15 @@
         jogador = caminho;
 
         while(jogador != NULL){
-            printf("%c\n", jogador->info);
+            printf("\n%c", jogador->info);
+            if(jogador->info =='c') 
+                printf(" => estou em casa\n");
+            if(jogador->info =='0') 
+                printf(" => destruir\n");
+            if(jogador->info =='f') 
+                printf(" => terminei!!!\n");
+            else 
+                printf("\n");
             jogador = jogador->prox;
         }
     }
