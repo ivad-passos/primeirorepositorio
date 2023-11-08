@@ -15,10 +15,6 @@ int main() {
         }
     }
 
-    printf("\n----------------------\n");
-    printf("       diagonal       ");
-    printf("\n----------------------\n");
-
     for (i = 0; i < 5; i++) {
         printf("\n");
         for (j = 0; j < 5; j++) {
